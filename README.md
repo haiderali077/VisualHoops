@@ -1,7 +1,7 @@
 # Hoop-Metrics
 
 ## Overview
-This project is a two-part NBA data analytics endeavor that uses Python to scrape and analyze NBA statistics data from [NBA.com/stats](https://www.nba.com/stats/). The project focuses on understanding trends in player performance and team strategies over the last 10 years (2012-2022).
+This project is a  NBA data analytics that uses Python to scrape and analyze NBA statistics data from [NBA.com/stats](https://www.nba.com/stats/). The project focuses on understanding trends in player performance and team strategies over the last 12 years (2012-2024) and how has the game changed over the years.
 
 Part 1 involves scraping NBA statistics data from the official API, while Part 2 focuses on cleaning, analyzing, and visualizing this data to uncover interesting insights about the game of basketball.
 
