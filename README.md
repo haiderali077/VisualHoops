@@ -53,6 +53,14 @@ Correlation matrix reveals which stats move together.
 Tighter playoff rotations shown through minutes distribution.  
 ![Minutes Played](images/reg-vs-playoffs-mins.jpg)
 
+### 🆚 Regular Season vs Playoffs: Stat Differences
+
+This visualization compares average player statistics between the regular season and playoffs.  
+Values above `0` indicate an increase during playoffs, while values below `0` show a drop.  
+It highlights how the game tightens — with key shifts in for example **Turnovers (TOV)**, **Field goal (FG%) percentage** , and **3 pointers percentage (3PT%)**.
+
+![Regular Season vs Playoffs Stat Difference](images/reg-vs-playoffs-difference.jpg)
+
 ## 🔍 Key Takeaways
 
 - **Strategic Shift**: NBA teams are taking nearly 3× more three-point attempts than a decade ago.
