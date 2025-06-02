@@ -1,93 +1,131 @@
-# Hoop-Metrics
+# 🏀VisualHoops
 
 ## Overview
-This project is a  NBA data analytics that uses Python to scrape and analyze NBA statistics data from [NBA.com/stats](https://www.nba.com/stats/). The project focuses on understanding trends in player performance and team strategies over the last 12 years (2012-2024) and how has the game changed over the years.
 
-Part 1 involves scraping NBA statistics data from the official API, while Part 2 focuses on cleaning, analyzing, and visualizing this data to uncover interesting insights about the game of basketball.
+\*VisualHoops** is a data-driven exploration of how the NBA has evolved over the past decade (2012–2024). From three-point revolutions to shifting playoff dynamics, this project dives deep into player performance trends and strategic transformations using data scraped directly from [NBA.com/stats](https://www.nba.com/stats/). Built for analysts and basketball enthusiasts, this project combines **Python**, **pandas**, and **plotly** within an interactive **Jupyter Notebook\*\* environment.
 
 ---
 
-## Features
-### Part 1: Data Scraping
+## 🚀 Key Features
+
+### 📊 Part 1: Data Scraping
+
 - Utilizes **Python requests** to scrape data from the NBA stats API.
 - Processes regular season and playoff data for all players over 10 seasons.
-- Stores the scraped data in a **pandas DataFrame** and exports it as an Excel file (`NBA_PlayerData.xlsx`).
-- Implements lag times and randomization to prevent API blocks while scraping.
+- Implemented anti-blocking measures (lag/random delays) to ensure reliable batch scraping.
+- Saved cleanly structured datasets to Excel (`NBA_PlayerData.xlsx`) for analysis and sharing.
 
-### Part 2: Data Analysis and Visualization
-- **Data Cleaning:**
-  - Removes unnecessary columns (e.g., "Rank" and "Efficiency").
-  - Standardizes team names and creates a "Season Start" column.
-  - Differentiates between regular season (RS) and playoff (PO) data.
-- **Analysis Highlights:**
-  1. Player stat correlations, such as the relationships between three-point shooting and rebounding.
-  2. Distribution of player minutes during regular seasons and playoffs.
-  3. Changes in gameplay trends over the last 10 years, including the rise of three-point shooting and pace of play.
-- **Visualization:**
-  - Heatmaps of stat correlations using **plotly**.
-  - Histograms and line charts for exploring distributions and trends.
-  - Side-by-side comparisons of regular season and playoff stats.
+### 📈 Part 2: Data Analysis & Visualization
+
+- Cleaned and standardized the dataset (team names, missing values, stat types).
+- Segmented **regular season vs playoff** performance.
+- Differentiated between regular season (RS) and playoff (PO) data.
+- Used `plotly`, `seaborn`, and `matplotlib` for interactive charts that highlight gameplay trends and statistical relationships.
 
 ---
 
-## Installation
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/yourusername/nba-stats-analysis.git
-   cd nba-stats-analysis
-   ```
-2. Install the required Python packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Download and save the scraped data (optional):
-   - Use the `NBA_PlayerData.xlsx` file provided or run Part 1 to generate the data.
+## 💡 What I Built & Learned
+
+- Built a fully modular, notebook-based analytics pipeline for data scraping, cleaning, and visualization.
+- Strengthened practical skills in **sports analytics**, **data preprocessing**.
+- Visualized complex trends from large time-series datasets using best practices in data analysis.
+- Applied interactive visualization tools (e.g., `plotly` sliders, heatmaps) to create intuitive and explorable insights.
+- Identified key gameplay trends, including increased reliance on **three-point shooting**, **playoff foul patterns**, and **reduced bench usage** in postseason games.
 
 ---
 
-## Usage
-### Part 1: Scraping Data
-To scrape NBA data:
+## 📸 Highlights
+
+<sub>These are just a few snapshots. The full Jupyter Notebook includes dozens of interactive charts, gameplay shifts, and deep stat breakdowns.</sub>
+
+### 📈 Evolution of the 3-Point Era
+
+NBA’s growing reliance on perimeter shooting.  
+![3PT Trend](images/3-points-shift.jpg)
+
+### 🔥 Stat Synergy Heatmap
+
+Correlation matrix reveals which stats move together.  
+![Heatmap](images/heat-map.jpg)
+
+### 🕒 Minutes Played: RS vs Playoffs
+
+Tighter playoff rotations shown through minutes distribution.  
+![Minutes Played](images/reg-vs-playoffs-mins.jpg)
+
+## 🔍 Key Takeaways
+
+- **Strategic Shift**: NBA teams are taking nearly 3× more three-point attempts than a decade ago.
+- **Efficiency Rise**: Despite faster pace, shooting percentages have generally improved.
+- **Playoff Behavior**: Fouls increase, benches shorten, and defensive effort intensifies post-season.
+- **Role Adaptation**: Star players carry heavier minutes loads in playoffs compared to regular season.
+
+> These are just a few highlights — the full notebook reveals even more nuanced trends, interactive visualizations, and player-specific insights when explored in depth.
+
+## Technologies Used
+
+- **Python** – core scripting and analysis
+- **pandas** – data wrangling and transformation
+- **plotly & matplotlib** – interactive and static visualizations
+- **openpyxl** – Excel export for scraped data
+- **Jupyter Notebook** – all-in-one exploratory analysis environment
+
+---
+
+## ⚙️ How to Run Locally
+
+### 1. Clone the Repository
+
 ```bash
-python scrape_data.py
+git clone https://github.com/haiderali077/hoop-metrics.git
+cd VisualHoops
 ```
-The scraped data will be saved as `NBA_PlayerData.xlsx` in the project directory.
 
-### Part 2: Analyzing Data
-To analyze and visualize the data:
+### 2. Install Required Packages
+
 ```bash
-python analyze_data.py
+pip install -r requirements.txt
 ```
-This will generate:
-- Correlation heatmaps.
-- Visualizations comparing stats between seasons and playoffs.
-- Insights into gameplay changes over the last decade.
+
+### 3. Run the Notebook
+
+Launch Jupyter and open `nba_analysis.ipynb`:
+
+```bash
+jupyter notebook
+```
 
 ---
 
-## Examples
-### Stat Correlation Heatmap
-![Heatmap Example](heatmap_example.png)
+## 🗂️ File Structure
 
-### Minutes Played Distribution
-![Minutes Distribution](minutes_distribution.png)
-
----
-
-## Key Insights
-1. **Stat Trends:** The NBA has seen a significant rise in three-point attempts and makes, indicating a strategic shift toward perimeter shooting.
-2. **Playoff Differences:** The playoffs feature tighter player rotations and increased physicality, as evidenced by higher foul rates.
-3. **Efficiency Improvements:** Despite faster gameplay, true shooting efficiency has steadily improved over the years.
+```
+├── scrape_data.py              # Raw data collection script
+├── nba_analysis.ipynb          # Main notebook for analysis and visuals
+├── NBA_PlayerData.xlsx         # Cleaned player stats (output)
+├── /images                     # Visuals used in README
+└── requirements.txt            # All dependencies
+```
 
 ---
 
+## 👤 About Me
 
-## Contact
-For questions or suggestions, feel free to reach out:
-- **Name:** Haider
-- **GitHub:** [haiderali077](https://github.com/haiderali077)
+Hi! I'm **Haider Ali**, a Computer Science student passionate about data science, and sports.
+
+This project allowed me to strengthen my skills in:
+
+- Real-world data extraction and cleaning
+- Python scripting and automation
+- Exploratory data analysis and interactive visualization
+
+I'm always looking to grow and take on new challenges in data analytics and software development.
+
+🔗 [GitHub – haiderali077](https://github.com/haiderali077)
 
 ---
 
-## Acknowledgments
-Special thanks to [NBA.com](https://www.nba.com/stats/) for providing access to their stats data.
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).  
+NBA data sourced from [NBA.com/stats](https://www.nba.com/stats/). This project is for educational purposes only and is not affiliated with the NBA.
